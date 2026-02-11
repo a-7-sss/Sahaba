@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+    --mainColor: oklch(0.21 0.03 263.45);
+    --secondColor: oklch(0.67 0.17 53.38);
+    --thirdColor: #4b5666;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Funnel Sans', sans-serif !important;
+    background-color: oklch(0.99 0.02 95.84);
+    direction: rtl;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+/* Main Design */
+
+
+/* NavBar */
+
+.nav {
+    background-color: #fff;
+    box-shadow: 0 -3px 5px #000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.3rem;
+    width: 1200px;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    margin: auto;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.hideTilte {
+    display: none !important;
+}
+
+.hideTilte .mainTitle {
+    align-self: flex-start;
+}
+
+.nav-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.nav .mainTitle {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--mainColor);
+}
+
+.descriptionTitle {
+    font-size: 0.8rem;
+    color: oklch(0.45 0.03 257.71);
+}
+
+.nav-logo img {
+    display: flex;
+    width: 3.5rem;
+}
+
+.designer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.social-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.social-contact a {
+    text-decoration: none;
+    color: var(--secondColor);
+}
+
+.social-contact i {
+    font-size: 1.2rem;
+}
+
+
+/* EndNav */
+
+
+/* Container */
+
+.meals {
+    padding: 2rem;
+}
+
+.meals-container {
+    height: 45rem;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.containerOfimg {
+    padding: 1rem 0;
+    display: flex;
+    grid-column: span 2;
+    border-radius: 1rem;
+    border: 2px solid var(--secondColor);
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgPhoto {
+    width: 100%;
+    height: auto;
+    /* بدل 100% */
+    display: block;
+    /* أو امسح position خالص */
+    transform: scale(0.8);
+    /* بلاش scale لو مش محتاج */
+    object-fit: contain;
+}
+
+.meal-rate {
+    border: 1px solid var(--secondColor);
+    color: black;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.meal-details {
+    width: 80%;
+    bottom: 1.5rem;
+    background-color: white;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--secondColor);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.meal-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 25px;
+    gap: .3rem;
+}
+
+.meal-time .txt-time {
+    font-size: 1rem;
+    color: oklch(0.45 0.03 257.71);
+}
+
+.meal-time .prepTime,
+.meal-time .cookTime,
+.meal-time .servings {
+    white-space: pre-line;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.meal-time i {
+    font-size: 1.5rem;
+}
+
+
+/* Right Side */
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 3;
+    padding: 3rem 2.5rem;
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.91 0.11 87.92) transparent;
+}
+
+.details-container .top-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.left-TD {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-TD .top-LTD {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.left-TD .main-title {
+    margin-bottom: .5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.left-TD .main-description {
+    color: oklch(0.45 0.03 257.71);
+    font-size: 1.1rem;
+}
+
+.top-LTD span {
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: small;
+    background: oklch(0.96 0.04 157.51);
+}
+
+.top-LTD .left-TTD {
+    color: oklch(0.55 0.15 150.18);
+}
+
+.right-TD {
+    cursor: pointer;
+}
+
+.right-TD i {
+    background-color: oklch(0.97 0.11 105.38);
+    padding: 16px 18px;
+    color: var(--secondColor);
+    border-radius: 10px;
+}
+
+.right-TD i:hover {
+    background-color: oklch(77.187% 0.16398 60.042);
+    color: oklch(89.554% 0.09984 80.642);
+    transition: all 0.2s ease;
+}
+
+.detailed-buttons {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid oklch(0.93 0.01 0);
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.detailed-buttons button {
+    background: transparent;
+    color: oklch(0.45 0.03 257.71);
+    border: none;
+    width: 130px;
+    padding: 8px 0px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.detailed-buttons button:hover {
+    color: oklch(35.754% 0.01611 255.666);
+}
+
+.detailed-buttons .active {
+    color: oklch(0.67 0.17 53.38);
+    border-bottom: 2px solid oklch(0.67 0.17 53.38);
+}
+
+.detailed-buttons .active:hover {
+    color: oklch(0.67 0.17 53.38);
+}
+
+hr {
+    margin: 0 0 1.5rem;
+    border-style: solid;
+    color: oklch(0.93 0.01 0);
+}
+
+.container {
+    overflow-y: auto;
+    min-height: 350px;
+    padding: 1.5rem;
+    background-color: oklch(0.97 0.11 105.38);
+    border-radius: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.container ol {
+    list-style: none;
+    border-radius: 20px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    counter-reset: list-counter;
+}
+
+.container ol li {
+    color: oklch(0.45 0.03 257.71);
+    margin-bottom: 0.7rem;
+    margin-left: 0;
+    padding-right: 2.3rem;
+    position: relative;
+    font-size: 1.3rem;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.container ol .last-li {
+    margin-bottom: 0;
+}
+
+.container ol li::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    background: var(--secondColor);
+    color: oklch(0.95 0.04 76.14);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.instructions {
+    background-color: transparent;
+    padding: 23px 0;
+    border: 1px solid var(--secondColor);
+    border-radius: 20px;
+}
+
+.instructions ol {
+    background-color: transparent;
+}
+
+.instructions ol li {
+    display: flex;
+    white-space: pre-line;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.instructions ol li::before {
+    content: none;
+}
+
+.nutrition {
+    padding: 1.5rem 0;
+    background-color: transparent;
+}
+
+.nutrition ol li {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    white-space: pre-line;
+    border-radius: 20px;
+    background-color: oklch(0.97 0.11 105.38);
+}
+
+.nutrition ol li::before {
+    content: none;
+}
+
+.nutrition .containerDetails {
+    background: oklch(0.97 0.02 131.26);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: oklch(0.35 0.02 257.71);
+}
+
+.containerDetails .txt {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: oklch(0.21 0.03 263.45);
+}
+
+.nutrition .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nutrition .icon p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.nutrition .icon-container {
+    background: oklch(0.95 0.04 76.14);
+    padding: 5px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nutrition .icon i {
+    font-size: large;
+}
+
+.hr-bottom {
+    margin: 2rem 0;
+}
+
+.LastBtn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.LastBtnContainer {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.LastBtn button {
+    height: 2.5rem;
+    padding: 0rem 1.5rem;
+    font-size: large;
+    font-weight: 700;
+    color: white;
+    background: oklch(0.67 0.17 53.38);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.LastBtn button:hover {
+    transform: scale(1.05);
+}
+
+.LastBtn .pastBtn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.LastBtn .right-TD {
+    display: none;
+}
+
+.footer {
+    display: none;
+}
+
+
+/* MEDIAAAAAAAAA */
+
+@media (max-width: 1025px) {
+    .nav-container {
+        justify-content: space-between;
+        width: auto;
+        padding: 1.5rem 2rem;
+    }
+    .nav-title {
+        display: none;
+    }
+    .hideTilte {
+        display: flex !important;
+    }
+    .meals {
+        padding: 3rem 1rem 5rem;
+    }
+    .meals-container {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    .hideContact {
+        display: flex;
+    }
+    .containerOfimg {
+        display: block;
+    }
+    .img-container {
+        grid-column: span 1;
+        height: auto;
+    }
+    .imgPhoto {
+        bottom: 8%;
+    }
+    .meal-details {
+        width: 70%;
+        justify-content: center;
+        gap: .5rem;
+    }
+    .meal-time {
+        margin: 10px 15px;
+    }
+    .details-container {
+        padding: 3rem 1.5rem;
+    }
+    .details-container .top-details {
+        justify-content: center;
+    }
+    .right-TD {
+        display: none;
+    }
+    .left-TD {
+        align-items: center;
+    }
+    .left-TD .main-description {
+        text-align: center;
+    }
+    .txt-hide {
+        display: none;
+    }
+    .container ol li {
+        margin-bottom: 1rem;
+    }
+    .container ol li::before {
+        top: 15%;
+    }
+    .LastBtn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .LastBtn .LastBtnContainer {
+        display: flex;
+        align-items: center;
+        gap: .3rem;
+    }
+    .LastBtn .right-TD {
+        display: flex;
+    }
+    .footer {
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+    .nav-container {
+        justify-content: center;
+    }
+    .hideContact {
+        display: none;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        background: white;
+        gap: .8rem;
+        box-shadow: 0 -2px 5px #c9c9c9;
+    }
+}
+
+@media (max-width:436px) {
+    .img-container {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 353px) {
+    .LastBtn button {
+        font-size: medium;
+    }
+    .meal-time .prepTime,
+    .meal-time .cookTime,
+    .meal-time .servings {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .nav .mainTitle {
+        font-size: 1.3rem;
+    }
+    .descriptionTitle {
+        font-size: 0.8rem;
+    }
+}
