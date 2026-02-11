@@ -610,3 +610,40 @@ nextBtn.addEventListener("click", function() {
     RandomNumber(currentIndex);
 
 });
+
+// ShareBtn
+
+const shareBtn = document.getElementById('shareBtn');
+const siteURL = "https://a-7-sss.github.io/Sahaba/"; // رابط الموقع بتاعك
+
+shareBtn.addEventListener('click', async() => {
+    // البيانات اللي هتشارك
+    const shareData = {
+        title: 'موقع الصحابة',
+        text: 'تعرف على صحابة رسول الله ﷺ',
+        url: siteURL
+    };
+
+    // لو المتصفح بيدعم Web Share API
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+            console.log('تم فتح نافذة المشاركة!');
+        } catch (err) {
+            console.log('Error:', err);
+        }
+    } else {
+        // fallback: نافذة فيها أزرار لكل منصة
+        const shareOptions = `
+      <div style="font-family:sans-serif; padding:20px;">
+        <h3>شارك الموقع على:</h3>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteURL)}','_blank')" style="margin:5px; padding:8px 12px;">Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url=${encodeURIComponent(siteURL)}','_blank')" style="margin:5px; padding:8px 12px;">Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text=${encodeURIComponent(siteURL)}','_blank')" style="margin:5px; padding:8px 12px;">WhatsApp</button>
+        <button onclick="window.open('mailto:?subject=شوف الموقع ده&body=${encodeURIComponent(siteURL)}','_blank')" style="margin:5px; padding:8px 12px;">Email</button>
+      </div>
+    `;
+        const w = window.open('', 'Share', 'width=400,height=400');
+        w.document.write(shareOptions);
+    }
+});
