@@ -596,9 +596,13 @@ pastBtn.addEventListener("click", function() {
     detailBtns.forEach((button) => button.classList.remove("active"));
     ingredientsBtn.classList.add("active");
     RandomNumber(currentIndex);
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
-// Next Button to get a Next Sahaby
 
+// Next Button to get a Next Sahaby
 const nextBtn = document.querySelector(".nextBtn");
 
 nextBtn.addEventListener("click", function() {
@@ -608,7 +612,10 @@ nextBtn.addEventListener("click", function() {
     detailBtns.forEach((button) => button.classList.remove("active"));
     ingredientsBtn.classList.add("active");
     RandomNumber(currentIndex);
-
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
 
 // ShareBtn
