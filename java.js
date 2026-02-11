@@ -647,3 +647,25 @@ shareBtn.addEventListener('click', async() => {
         w.document.write(shareOptions);
     }
 });
+
+
+// SharesmallBtn
+
+const shareSmallBtn = document.getElementById('shareSmallBtn');
+const shareModal = document.getElementById('shareModal');
+
+shareSmallBtn.addEventListener('click', async() => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'موقع الصحابة',
+                text: 'تعرف على صحابة رسول الله ﷺ',
+                url: 'https://a-7-sss.github.io/Sahaba/'
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    } else {
+        shareModal.style.display = 'flex';
+    }
+});
